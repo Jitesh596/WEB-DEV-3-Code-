@@ -26,8 +26,9 @@
 // console.log(chalk.green("Success: Operation completed successfully"));
 // console.log(chalk.yellow("Warning: This action may have not work"));
 
-
+require("dotenv").config();
 const process = require("process");
-// console.log(process.argv[2]);
+// // console.log(process.argv[2]);
 
-console.log(process.env.PORT);
+// console.log(process.env.PORT);
+const PORT = process.env.PORT || 3000;
