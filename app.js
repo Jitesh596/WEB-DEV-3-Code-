@@ -26,8 +26,20 @@
 // console.log(chalk.green("Success: Operation completed successfully"));
 // console.log(chalk.yellow("Warning: This action may have not work"));
 
-
+const http = require("http");
+require("dotenv").config();
 const process = require("process");
-// console.log(process.argv[2]);
+// // console.log(process.argv[2]);
 
-console.log(process.env.PORT);
+// console.log(process.env.PORT);
+const PORT = process.env.PORT || 3000;
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.write("<h1>Hello World</h1>");
+  res.write("<p>Welocme To Our node.js Server</p>");
+  res.end();
+});
+
+server.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
