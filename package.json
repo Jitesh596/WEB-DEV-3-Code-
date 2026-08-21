@@ -1,20 +1,18 @@
 {
-  "name": "myapp",
+  "name": "project",
   "version": "1.0.0",
-  "description": "This is my app",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jitesh Kumar",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
-    "chalk": "^6.0.0",
-    "dotenv": "^17.4.2",
-    "env": "^0.0.2"
-  },
-  "devDependencies": {
+    "express": "^5.2.1",
     "nodemon": "^3.1.14"
   }
 }
