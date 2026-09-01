@@ -26,7 +26,6 @@
 // console.log(chalk.green("Success: Operation completed successfully"));
 // console.log(chalk.yellow("Warning: This action may have not work"));
 
-const http = require("http");
 require("dotenv").config();
 const process = require("process");
 // // console.log(process.argv[2]);

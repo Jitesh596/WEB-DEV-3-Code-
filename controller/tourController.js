@@ -1,0 +1,41 @@
+const tourModel = require('../model/tourModel')
+
+// Get all tours
+const getAllTours = (req, res) => {
+    const tours = tourModel.getAll();
+    res.json(tours);
+}
+
+// Get a single tour by ID
+const getTourById = (req, res) => {
+    const tour = tourModel.getById(req.params.id);
+    if (!tour) {
+        return res.status(404).json({ message: 'Tour not found' });
+    }
+    res.json(tour);
+}
+
+const getTourByquery = (req, res) => {
+    const query = req.query.name;
+    const tours = tourModel.getByquery(query);
+    res.json(tours);
+}
+
+const saveTours = (req, res) => {
+    const tours = req.body;
+    tourModel.save(tours);
+    res.status(201).json(tours);
+
+const updateTours = (id, updatedTour) => {
+    const id = req.params.id;
+    const data = req.body;
+    tourModel.updateTour(id)
+
+}
+}
+module.exports = {
+    getAllTours,
+    getTourById,
+    getTourByquery,
+    saveTours
+};
