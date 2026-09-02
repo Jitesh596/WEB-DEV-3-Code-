@@ -1,4 +1,3 @@
-```js
 const tourModel = require('../model/tourModel')
 
 // Get all tours
@@ -49,4 +48,3 @@ module.exports = {
     saveTours,
     updateTours
 };
-```
