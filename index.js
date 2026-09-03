@@ -92,7 +92,16 @@ app.use(express.json());
 // app.use(logger);
 
 const checkApp = (res, req, next) => {
-  const age = 
+  const age = req.age;
+  if (age < 18) {
+    return res.status(403).json({ message: "You are not allowed to access this route" });
+  }
+  next();
+};
+
+app.use(checkApp);
+
+
 
 app.get("/", (req, res) => {
   res.send("Hello world")
