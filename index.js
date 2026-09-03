@@ -84,12 +84,15 @@ app.use(express.json());
 //   next();
 // }
 
-const logger = (req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-}
+// const logger = (req, res, next) => {
+//   console.log(`${req.method} ${req.url}`);
+//   next();
+// }
 
-app.use(logger);
+// app.use(logger);
+
+const checkApp = (res, req, next) => {
+  const age = 
 
 app.get("/", (req, res) => {
   res.send("Hello world")
